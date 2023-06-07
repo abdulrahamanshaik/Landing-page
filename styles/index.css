@@ -77,12 +77,17 @@ a {
   padding: 0.5rem 2rem;
   font-weight: 700;
   font-size: 16px;
+  transition: all 0.2s ease-in-out;
 }
 @media screen and (width <= 900px) {
   .hero-read-me-btn {
     font-size: 12px;
     padding: 0.25rem 1rem;
   }
+}
+.hero-read-me-btn:hover {
+  color: #a21d20;
+  background-color: #fff;
 }
 
 .cards-mask {
@@ -261,19 +266,22 @@ a {
 }
 
 .my-next-btn, .my-prev-btn {
+  color: #a21d20;
   border-radius: 50%;
   border: 2px solid #a21d20;
   height: 2rem;
   width: 2rem;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+.my-next-btn:hover, .my-prev-btn:hover {
+  color: #fff;
+  background-color: #a21d20;
 }
 
-.my-next-btn img {
-  transform: rotate(270deg);
-}
-
-.my-prev-btn img {
-  transform: rotate(90deg);
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .carousel-control-next-icon:after {
@@ -339,6 +347,10 @@ a {
   font-size: 14px;
 }
 
+.latest-highlets-carousel-wrapper {
+  height: 10rem;
+}
+
 .latest-highlets-carousel {
   display: flex;
   justify-content: flex-start;
@@ -352,4 +364,39 @@ a {
   width: 16vw;
   height: 100%;
   padding: 1rem;
+}
+.latest-highlets-carousel .lh-s3-i {
+  height: 7rem;
+}
+
+.latest-highlets-readmore-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.latest-highlets-readmore-wrapper p {
+  color: #4a4a4a;
+  font-size: 14px;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+.latest-highlets-readmore-wrapper button {
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #a21d20;
+  border: 2px solid #a21d20;
+  background-color: transparent;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.latest-highlets-readmore-wrapper:hover p {
+  color: #a21d20;
+}
+.latest-highlets-readmore-wrapper:hover button {
+  color: #fff;
+  background-color: #a21d20;
 }/*# sourceMappingURL=index.css.map */
