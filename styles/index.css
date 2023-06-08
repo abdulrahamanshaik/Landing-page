@@ -356,12 +356,18 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  color: #fff;
+  width: 8rem;
+  padding: 1rem;
   height: 100%;
+  transition: all 0.2s ease-in-out;
 }
 .hero-carousel-slide-btns h4 {
   font-weight: bold;
   font-size: 14px;
+}
+.hero-carousel-slide-btns:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .latest-highlets-carousel-wrapper {
