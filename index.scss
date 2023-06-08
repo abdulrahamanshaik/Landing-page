@@ -1,5 +1,5 @@
 *{
-    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 .navbar{
@@ -34,14 +34,13 @@ a{
 }
 
 .hero-main{
-    height: 60vh;
+    height: 480px;
     background: url('/Images/banner.png') center center no-repeat;
     color: #fff;
    
 }
     .container,.row{
         height: 100%;
-        // width: 100%;
     }
 .hero-left-section{
     height: 100%;
@@ -52,7 +51,8 @@ a{
 }
 
 .hero-right-section{
-    height: 100%;
+    height: 480px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,6 +111,23 @@ a{
     }
 }
 
+.hero-slides-wrapper{
+    height: 480px;
+    text-align:center;
+  overflow-y:hidden;
+  scroll-behavior: smooth;
+}
+
+#slide1,#slide2,#slide3,#slide4{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 480px;
+    width: 100%;
+}
+
+
 .latest-highlets-carousel{
     h1{
         font-size: 18px;
@@ -118,6 +135,8 @@ a{
         color: #4a4a4a;
     }
 }
+
+
 
 
 
@@ -416,3 +435,69 @@ a{
     }
 }
 
+
+
+#footer-wrapper{
+    font-family: roboto;
+    letter-spacing: 1px;
+    background-color: #2a2a2a;
+    color: #fff;
+   
+    .semi-bold{
+        font-size: 14px;
+        color: #c5c5c5;
+    }
+    ul li{
+        list-style: none;
+
+     a{
+        padding-bottom: 4px;
+        font-size: 12px;
+        font-weight:500;
+        margin: 0;
+        padding: 0;
+        color: #7d7d7d;
+    }}
+    .footer-info{
+        font-size: 14px;
+        font-weight: 500;
+        color: #c5c5c5;
+    }
+     .social-icons{
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        color: #fff;
+        background: #3B5998;
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 4px;
+        padding: 16px;
+
+
+
+        &:hover {
+           opacity: 0.7;
+         }
+
+         .fa{
+            color: #fff;
+         }
+      }
+      
+     .footer-pp{
+        text-align: right;
+        font-size: 14px;
+        color: #ccc;
+     }
+}
+
+
+
+.slider{
+    
+}
