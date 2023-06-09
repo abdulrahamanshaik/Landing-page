@@ -33,3 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+
+const buttons = document.getElementsByClassName("hero-carousel-slide-btns");
+
+Array.from(buttons).forEach((button) => {
+  button.addEventListener("click", function () {
+    Array.from(buttons).forEach((btn) => {
+      btn.classList.remove("active-slide");
+    });
+    this.classList.add("active-slide");
+  });
+});

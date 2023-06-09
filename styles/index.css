@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -38,8 +39,15 @@ a {
 
 .hero-main {
   height: 480px;
+  width: 100%;
   background: url("/Images/banner.png") center center no-repeat;
+  background-size: cover;
   color: #fff;
+}
+@media screen and (width <= 900px) {
+  .hero-main {
+    height: auto;
+  }
 }
 
 .container, .row {
@@ -47,11 +55,16 @@ a {
 }
 
 .hero-left-section {
-  height: 100%;
+  height: 480px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (width <= 900px) {
+  .hero-left-section {
+    height: auto;
+  }
 }
 
 .hero-right-section {
@@ -59,7 +72,7 @@ a {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: rgba(162, 29, 32, 0.25);
 }
 .hero-right-section h1 {
@@ -68,6 +81,7 @@ a {
 .hero-right-section p {
   font-size: 16px;
   color: #c5c5c5;
+  text-align: left;
 }
 
 .hero-read-me-btn {
@@ -89,6 +103,27 @@ a {
 .hero-read-me-btn:hover {
   color: #a21d20;
   background-color: #fff;
+}
+
+.hero-slides-wrapper {
+  height: 100%;
+  text-align: center;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+#slide1, #slide2, #slide3, #slide4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+}
+
+.active-slide {
+  background-color: #a21d20 !important;
 }
 
 .cards-mask {
@@ -116,31 +151,97 @@ a {
   }
 }
 
-.hero-slides-wrapper {
-  height: 480px;
-  text-align: center;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
+.latest-highlets-carousel-wrapper {
+  background-color: #f0f2f2;
+  height: 12rem;
+}
+@media screen and (width <= 900px) {
+  .latest-highlets-carousel-wrapper {
+    height: auto;
+  }
+}
+.latest-highlets-carousel-wrapper .latest-highlets-heading {
+  font-size: 32px;
 }
 
-#slide1, #slide2, #slide3, #slide4 {
+.latest-highlets-carousel {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  height: 480px;
-  width: 100%;
 }
-
 .latest-highlets-carousel h1 {
   font-size: 18px;
   font-weight: 700;
   color: #4a4a4a;
 }
+.latest-highlets-carousel div {
+  width: 70%;
+  border-right: 1px solid #c0bdbd;
+}
+.latest-highlets-carousel img {
+  width: 16vw;
+  height: 100%;
+  padding: 1rem;
+}
+@media screen and (width <= 900px) {
+  .latest-highlets-carousel img {
+    width: 50%;
+  }
+}
+.latest-highlets-carousel .lh-s3-i {
+  height: 7rem;
+}
+
+.latest-highlets-readmore-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.latest-highlets-readmore-wrapper p {
+  color: #4a4a4a;
+  font-size: 14px;
+  margin: 0.5rem;
+  font-weight: bold;
+}
+.latest-highlets-readmore-wrapper button {
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #a21d20;
+  border: 2px solid #a21d20;
+  background-color: transparent;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.latest-highlets-readmore-wrapper:hover p {
+  color: #a21d20;
+}
+.latest-highlets-readmore-wrapper:hover button {
+  color: #fff;
+  background-color: #a21d20;
+}
+
+.video-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #4a4a4a;
+}
+.video-content-wrapper .video-sec-heading {
+  font-size: 32px;
+}
+.video-content-wrapper p {
+  font-size: 16px;
+}
 
 .video-wrapper {
   background: url("/Images/video-bg.jpg") center center no-repeat;
-  height: 30rem;
+  height: 26rem;
   overflow: hidden;
   border-radius: 30px;
 }
@@ -153,6 +254,15 @@ a {
   background: url("/Images/video-person.png") center center no-repeat;
   background-size: cover;
   height: 100%;
+}
+.video-wrapper .mask .person img {
+  cursor: pointer;
+}
+
+.three-card-wrapper {
+  background-color: #f0f2f2;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .three-card-content {
@@ -301,12 +411,24 @@ a {
   opacity: 0.5;
 }
 
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  transition: all 0.2s ease-in-out;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 24px;
+}
+
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
+  background-color: #fff;
+  color: #a21d20;
+}
+
 .carousel-control-next-icon:after {
-  content: ">";
+  content: "❯";
 }
 
 .carousel-control-prev-icon:after {
-  content: "<";
+  content: "❮";
 }
 
 .main-carousel .active {
@@ -370,60 +492,6 @@ a {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.latest-highlets-carousel-wrapper {
-  height: 10rem;
-}
-
-.latest-highlets-carousel {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.latest-highlets-carousel div {
-  width: 70%;
-  border-right: 1px solid #c0bdbd;
-}
-.latest-highlets-carousel img {
-  width: 16vw;
-  height: 100%;
-  padding: 1rem;
-}
-.latest-highlets-carousel .lh-s3-i {
-  height: 7rem;
-}
-
-.latest-highlets-readmore-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.latest-highlets-readmore-wrapper p {
-  color: #4a4a4a;
-  font-size: 14px;
-  margin: 0.5rem;
-  font-weight: bold;
-}
-.latest-highlets-readmore-wrapper button {
-  border-radius: 50%;
-  width: 1.4rem;
-  height: 1.4rem;
-  color: #a21d20;
-  border: 2px solid #a21d20;
-  background-color: transparent;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.latest-highlets-readmore-wrapper:hover p {
-  color: #a21d20;
-}
-.latest-highlets-readmore-wrapper:hover button {
-  color: #fff;
-  background-color: #a21d20;
-}
-
 #footer-wrapper {
   font-family: roboto;
   letter-spacing: 1px;
@@ -456,7 +524,6 @@ a {
   text-decoration: none;
   border-radius: 50%;
   color: #fff;
-  background: #3B5998;
   height: 2.5rem;
   width: 2.5rem;
   display: flex;
@@ -464,6 +531,7 @@ a {
   align-items: center;
   margin: 4px;
   padding: 16px;
+  cursor: pointer;
 }
 #footer-wrapper .social-icons:hover {
   opacity: 0.7;
@@ -472,7 +540,18 @@ a {
   color: #fff;
 }
 #footer-wrapper .footer-pp {
-  text-align: right;
   font-size: 14px;
   color: #ccc;
+}
+
+.fb {
+  background-color: #3b5998;
+}
+
+.tw {
+  background-color: #00aced;
+}
+
+.lk {
+  background-color: #007bb6;
 }/*# sourceMappingURL=index.css.map */
